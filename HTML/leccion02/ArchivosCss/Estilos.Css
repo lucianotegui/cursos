@@ -1,0 +1,17 @@
+
+    h1{
+      color: rgb(190, 184, 235);
+      text-align: center;
+    }
+    p{
+      color: rgb(70, 78, 71);
+      background-color: rgb(241, 255, 250);
+      padding: 15px;
+      border: 10px solid rgb(11, 85, 99);
+      /*margin-top: 40px;
+      margin-right: 10px;
+      margin-bottom: 20px;
+      margin-left: 10px;*/
+      margin: 40px 10px 20px 10px;
+      text-align: center;
+    }

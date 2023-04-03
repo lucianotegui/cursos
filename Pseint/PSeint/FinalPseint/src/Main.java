@@ -1,0 +1,87 @@
+public class Main {
+
+    public static void main(String args[]) {
+        String cadena1;
+        String cadena2;
+        int calculadora[][][];
+        int diagonal3d1;
+        int diagonal3d2;
+        // Definici�n de variables
+        // Definimos las 3 dimensiones de la matriz calculadora
+        calculadora = new int[3][3][3];
+        // Asignamos valores a las cadenas de texto
+        cadena1 = "123456789";
+        cadena2 = "987654321";
+        // Inicializamos la matriz
+        // inicializarmatriz(calculadora);
+        // Llenamos las matrices como se marca en el enunciado
+        llenarmatriz_z0(calculadora, cadena1);
+        llenarmatriz_z1(calculadora, cadena2);
+        llenarmatriz_z2(calculadora);
+        // Mostramos los resultados de la matriz
+        imprimirmatriz(calculadora);
+        // Asignamos los valores de las diagonales 3D
+        diagonal3d1 = calculadora[0][2][0] * calculadora[1][1][1] * calculadora[2][0][2];
+        diagonal3d2 = calculadora[0][0][0] * calculadora[1][1][1] * calculadora[2][2][2];
+        // Escribimos los resultados de las diagonales
+        System.out.println("La multiplicaci�n de los elementos de la diagonal 3D 1 es " + diagonal3d1);
+        System.out.println("La multiplicaci�n de los elementos de la diagonal 3D 2 es " + diagonal3d2);
+    }
+
+    ///Recibe una matriz y la llena con los valores de la cadena separados y
+    ///convertidos a n�meros. Pista: tendremos que utilizar un contador auxiliar
+    ///para asignar los valores.
+    public static void llenarmatriz_z0(int[][][] matriz, String cadena) {
+        int contador, i, j;
+        contador = 0;
+        for (i = 0; i <= 2; i++) {
+            for (j = 0; j <= 2; j++) {
+                matriz[i][j][0] = Integer.parseInt(String.valueOf(cadena.substring(contador, contador + 1)));
+                contador = contador + 1;
+            }
+        }
+    }
+
+    /// Recibe una matriz y la llena conlos valores de la cadena separados y
+    /// convertidos a n�meros. Pista: tendremos que utilizar un contador auxiliar
+    /// para asignar los valores.
+    public static void llenarmatriz_z1(int[][][] matriz, String cadena) {
+        int contador, i, j;
+        contador = 0;
+        for (i = 0; i <= 2; i++) {
+            for (j = 2; j >= 0; j--) {
+                matriz[i][j][1] = Integer.parseInt(String.valueOf(cadena.substring(contador, contador + 1)));
+                contador = contador + 1;
+            }
+        }
+    }
+
+    /// Llena los valores multiplicando los elementos de las otras capas que
+    /// est�n en la misma posici�n
+    public static void llenarmatriz_z2(int[][][] matriz) {
+        int contador, i, j;
+        contador = 0;
+        for (i = 0; i <= 2; i++) {
+            for (j = 2; j >= 0; j--) {
+                matriz[i][j][2] = matriz[i][j][0] * matriz[i][j][1];
+            }
+        }
+    }
+    /// Muestra por pantalla la matriz. Se mostrar� la capa 0, debajo la capa 1 y
+    /// luego la capa 2.
+    public static void imprimirmatriz(int[][][] matriz) {
+        int contador, i, j, k;
+        contador = 0;
+        k = 0;
+        for (i = 0; i <= 2; i++) {
+            for (j = 0; j <= 2; j++) {
+                System.out.println("[" + matriz[i][j][k] + "]");
+                System.out.print("");
+            }
+            System.out.println("");
+            k = k + 1;
+        }
+    }
+    //public static void inicializarmatriz(SIN_TIPO calculadora) {
+    //}
+}

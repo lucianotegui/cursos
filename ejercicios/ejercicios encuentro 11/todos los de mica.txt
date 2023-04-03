@@ -1,0 +1,235 @@
+111
+Algoritmo ejercicio111
+	
+	Definir num1, num2, num3, num4, num5, i Como Entero
+	
+	Escribir "ingrese, de a uno, cinco números enteros, entre el 1 y el 20"
+	leer num1
+	leer num2
+	leer num3
+	leer num4
+	leer num5
+	
+	
+	para i = 0 hasta num1 Hacer
+		si i == 0 Entonces
+			Escribir sin saltar num1, " "
+		SiNo
+			Escribir sin saltar "*"
+		FinSi
+		
+		si i == num1 Entonces
+			Escribir ""
+		FinSi
+		
+	FinPara
+	
+	para i = 0 hasta num2 Hacer
+		si i == 0 Entonces
+			Escribir sin saltar num2, " "
+		SiNo
+			Escribir sin saltar "*"
+		FinSi
+		
+		si i == num2 Entonces
+			Escribir ""
+		FinSi
+		
+	FinPara
+	
+	para i = 0 hasta num3 Hacer
+		si i == 0 Entonces
+			Escribir sin saltar num3, " "
+		SiNo
+			Escribir sin saltar "*"
+		FinSi
+		
+		si i == num3 Entonces
+			Escribir ""
+		FinSi
+		
+	FinPara
+	
+	para i = 0 hasta num4 Hacer
+		si i == 0 Entonces
+			Escribir sin saltar num4, " "
+		SiNo
+			Escribir sin saltar "*"
+		FinSi
+		
+		si i == num4 Entonces
+			Escribir ""
+		FinSi
+		
+	FinPara
+	
+	para i = 0 hasta num5 Hacer
+		si i == 0 Entonces
+			Escribir sin saltar num5, " "
+		SiNo
+			Escribir sin saltar "*"
+		FinSi
+		
+		si i == num5 Entonces
+			Escribir ""
+		FinSi
+		
+	FinPara
+	
+FinAlgoritmo
+
+***************************************************************
+211
+Algoritmo ejercicio211
+	
+	Definir num, cifra Como real
+	
+	Escribir "Ingrese un número entero"
+	leer num
+	cifra = 0
+	
+	mientras num > 0 Hacer
+		
+		cifra = cifra + 1
+		num = num / 10
+		num = trunc(num)
+		
+	FinMientras
+	
+	Si cifra == 1 Entonces
+		
+		Escribir "El número ingresado tiene ", cifra, " cifra"
+		
+	SiNo
+		Escribir "El número ingresado tiene ", cifra, " cifras"
+		
+	FinSi
+	
+FinAlgoritmo
+***********************************************************
+311
+
+Algoritmo ejercicio311
+	
+	Definir usuario, contrasenia, respuesta como cadena
+	Definir i, botellas, opcionElegida como entero
+	Definir pesoBotellas, saldo como real
+	Definir login como logica
+	
+	Escribir "Ingrese el nombre de usuario"
+	leer usuario
+	saldo = 0
+	
+	Si usuario <> "Albus_D" Entonces
+		Hacer
+			Escribir "Usuario incorrecto. Intente nuevamente"
+			leer usuario
+		Mientras Que usuario <> "Albus_D"
+	FinSi
+	
+	Si usuario == "Albus_D" entonces
+		i = 3
+		Escribir "Ingrese la contraseña"
+		leer contrasenia
+		
+		Mientras i > 1 Y contrasenia <> "caramelosDeLimon" Hacer
+			Escribir "Contraseña incorrecta, intente nuevamente"
+			leer contrasenia
+			i = i - 1
+		FinMientras
+		
+		Si (usuario == "Albus_D" Y contrasenia == "caramelosDeLimon") Entonces
+			login = verdadero
+			Escribir "Acceso permitido"
+			
+		SiNo
+			Escribir "Acceso Denegado"
+		FinSi
+		
+	FinSi
+	
+	Si login Entonces
+		
+		Hacer
+			Escribir "Elija, con el número, la opción deseada"
+			Escribir "Opción 1: ingresar botellas"
+			Escribir "Opción 2: consultar saldo"
+			Escribir "Opción 3: salir"
+			leer opcionElegida
+			
+			Si opcionElegida == 1 Entonces
+				
+				Escribir "Cuántas botellas va a ingresar?"
+				leer botellas
+				
+				para i = 1 hasta botellas Hacer
+					pesoBotellas = aleatorio(100, 3000)
+					Escribir "Calculando peso de botella ingresada"
+					
+					Si pesoBotellas < 500 Entonces
+						Escribir "Su botella pesa ", pesoBotellas, " gramos"
+						Escribir "Por esta botella se pueden acreditar $50"
+						Escribir "Acepta?"
+						leer respuesta
+						
+						si minusculas(respuesta) == "si" Entonces
+							saldo = saldo + 50
+						SiNo
+							si minusculas(respuesta) == "no" Entonces
+								Escribir "Devolviendo material"
+							FinSi
+						FinSi
+						
+					SiNo
+						Si pesoBotellas >= 501 Y pesoBotellas <= 1500 Entonces
+							Escribir "Su botella pesa ", pesoBotellas, " gramos"
+							Escribir "Por esta botella se pueden acreditar $125"
+							Escribir "Acepta?"
+							leer respuesta
+							
+							si minusculas(respuesta) == "si" Entonces
+								saldo = saldo + 125
+							SiNo
+								si minusculas(respuesta) == "no" Entonces
+									Escribir "Devolviendo material"
+								FinSi
+							FinSi
+							
+						SiNo
+							Si pesoBotellas > 1501 Entonces
+								Escribir "Su botella pesa ", pesoBotellas, " gramos"
+								Escribir "Por esta botella se pueden acreditar $200"
+								Escribir "Acepta?"
+								leer respuesta
+								
+								si minusculas(respuesta) == "si" Entonces
+									saldo = saldo + 200
+								SiNo
+									si minusculas(respuesta) == "no" Entonces
+										Escribir "Devolviendo material"
+									FinSi
+								FinSi
+								
+							FinSi
+							
+						FinSi
+						
+					FinSi
+					
+				FinPara
+				
+			SiNo
+				Si opcionElegida == 2 Entonces
+					Escribir "Su saldo es $", saldo
+				FinSi
+				
+			FinSi
+			
+		Mientras Que opcionElegida <> 3
+		
+	FinSi
+	
+FinAlgoritmo
+*****************************
+
+

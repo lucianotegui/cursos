@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elementos basicos de html</title>
+  </head>
+  <!--<body style="background-color:rgb(200, 236, 241);" es para cambiar el color de fondo"-->
+    <body>
+  <!-- Font size: es para agregar el tamaño del h1, se separa con punto y coma ;
+  Font family: es para cambiar la fuente-->    
+    <h1 style="color: blue;font-size: 50px; font-family: 'Courier New'" >Titulo h1</h1>
+    <p>primer linea de parrafo <br><!--Es un salto de linea--> segunda linea de parrafo </p>
+    <hr><!--es un salto de linea pero hace una division con una raya-->
+    <p> segundo parrafo</p>
+    <!--Target="_blank" es para que la pagina se abra en una nueva ventana -->
+    <a href="pagina1.html" target="_blank">  ir a pagina1</a>
+    <br>
+    <!--<<Alt es para cuando queres poner algo y que se muestre en la imagen.
+    Width: es para darle el ancho en pixeles y Height: para el alto.
+     Title: es por si la imagen no se ve  entoces aparece lo que pongas ahi <<-->
+    <img src="Imagenes/html5.png" alt="Logo html5" width="100" height="115px" title="Logo HTML5"/>
+    <img src="http://globalmentoring.com.mx/imagenes/css3.png" alt="Logo css3" width="100px" title="Logo css3"/>
+    <img src="http://globalmentoring.com.mx/imagenes/javascript.png" alt="Logo javascript" width="100px" title="Logo javascript"/>
+    <!-- Title tambien se puede emplear en los parrafos y otras cosas. Style="color" es para darle un color al texto y debe ir dentro del <P> -->
+    <p title="Nuevo parrafo" style="color: red;">Este es nuestro parrafo</p>
+
+    <pre><!--pre-formater: es para que el texto se muestre tal cual se lo escriba-->
+este es  
+nuestro Nuevo parrafo
+    </pre>
+    Fomato de texto html.
+<h1>Arquitectos del cabello</h1>
+  <p><b>Mi primer pagina html</b></p><!--<b> es para poner en negritas-->
+  <p><strong>segundo parrafo</strong></p> <!--Strong= significa que el texto es importante-->
+  <p><i>tercer parrafo</i></p><!--<i> es para poner el texto en italica-->
+  <p><em>cuarto parrafo</em></p><!-- <em> es para enfatizar-->  
+  <p><small>quinto parrafo</small></p><!--small= es para poner el texto pequeño-->
+  <p><mark>sexto parrafo</mark></p><!--mark= es para poner una marca en nuetros texto( lo pone sobre amarillo)-->
+  <p><del>septimo parrafo</del></p><!--del= es para indicar que el texto se eliminay va a aparecer rayado-->
+  <p><ins>octavo parrafo</ins></p><!--ins= es para indicar que este texto se ha insertado-->
+  <p>noveno <sub>p</sub>arrafo H<sub>2</sub>o</p><!--Sub= es para indicar que es un sub indice-->
+  <p>decimo <sup>p</sup>arrafo</p><!--sup= es para indicar que el texto o caracter es un super indice-->
+
+<p><code>este es mi codigo</code></p><!--<code> se mostrara como si fuera un codigo
+     y se puede usar para ingresar codigo de un cierto lenguaje de programacion-->
+  <p>&#38; simbolo ampersand &para; simbolo de paragraph </p><!--estos son codigos de caracter, se utiliza
+    porque hay ciertos simbolos que estan reservados al sistema ej: !, <, > y se los convierte a codigo
+    para que se visualice correctamente y no tiren error(otro ejemplo serian los acentos)-->
+    <p>&lt; simbolo menor que</p>
+    <p>&gt; simbolo mayor que</p>
+    <p>&commat; simbolo de arroba</p>
+    <p>&aacute; &Aacute;rbol</p>
+    <p>&nbsp;&nbsp;&nbsp; texto con espacio</p>
+
+MAIL
+
+<!--Asi se pone el link para mandar un mail despues de la cuenta va ?, subjet significa que es el titulo de el mail. body= es el cuerpo y se antepone un & -->
+<a href="mailto:informes@globalmentoring.com.mx?subjet=contacto&body=prueba email">enviar email</a>
+  </body>
+</html>
+
+color en html
+  
+
+  <p style="color: salmon ;">color por nombre</p> <!--color por nombre// el color va de 0 (negro) a 255(blanco)-->
+  <p style="color: rgb(250, 128, 114);">color rgb</p> <!--rgb= r= rojp, g= green, b= blue-->
+  <p style="border:10px solid rgba(250,128,114,.3)">Color rgba con transparencia</p>
+  <p style="color: hsl(6, 93%, 71%)">color hsl</p>
+  <p style="border: 10px solid hsla(6, 93%, 71%,.3)">color por codigo hdla por transparencoa</p>
+  <p style="color: #fa8073">color por hexadecimal</p>
+
+Tablas HTML
+ <table>
+        <tr>
+            <th colspan="2">Nombre</th><!--table head= encabesado/ colspan= es para abarcar mas columnas-->
+            
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Juan</td><!--Table data= donde se ingresan los datos-->
+            <td>Perez</td>
+            <td rowspan="2">jperez@mail.com</td><!--Rowspan= es para abarcar mas renglones-->
+        </tr>
+        <tr>
+            <td>Maria</td><!--Table data= donde se ingresan los datos-->
+            <td>Lara</td>
+            
+        </tr>
+    </table>
+
+Listas en HTML
+
+<h1>Listas ordenadas</h1>
+    <ol type="I"><!--se puede modificar, si no queremos que se muestren numeros
+    o si queremos letras, o numeros romanos por ej con type="I"-->
+        <li>universidad java</li>
+        <li>Universidad phyton</li>
+        <li>univercidad exel</li>
+    </ol>

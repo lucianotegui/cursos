@@ -1,0 +1,116 @@
+Una matriz en PSeInt es una estructura de datos que permite almacenar y manipular una colección de valores relacionados que se organizan en filas y columnas. Se puede pensar en una matriz como una tabla rectangular de elementos, donde cada elemento tiene una posición única identificada por su fila y columna.
+
+Para crear una matriz en PSeInt, primero se debe declarar el tamaño de la matriz, especificando el número de filas y columnas que tendrá. La sintaxis para declarar una matriz es la siguiente:
+
+scss
+Copy code
+dimension matriz(filas, columnas)
+Por ejemplo, para declarar una matriz de 3 filas y 4 columnas, se usaría la siguiente instrucción:
+
+scss
+Copy code
+dimension matriz(3, 4)
+Una vez creada la matriz, se pueden asignar valores a sus elementos individuales, accediendo a ellos a través de su índice de fila y columna. La sintaxis para acceder a un elemento de la matriz es la siguiente:
+
+scss
+Copy code
+matriz(fila, columna) = valor
+Por ejemplo, para asignar el valor 10 al elemento de la segunda fila y tercera columna de la matriz, se usaría la siguiente instrucción:
+
+scss
+Copy code
+matriz(2, 3) = 10
+Para recorrer una matriz y realizar operaciones en todos sus elementos, se pueden usar bucles anidados para recorrer cada fila y columna de la matriz. La sintaxis para recorrer una matriz con un bucle for es la siguiente:
+
+java
+Copy code
+para fila = 1 hasta filas hacer
+    para columna = 1 hasta columnas hacer
+        // operaciones con el elemento de la matriz
+    finpara
+finpara
+Por ejemplo, para imprimir todos los elementos de la matriz, se podría usar el siguiente código:
+
+java
+Copy code
+para fila = 1 hasta filas hacer
+    para columna = 1 hasta columnas hacer
+        escribir(matriz(fila, columna))
+    finpara
+finpara
+En resumen, una matriz en PSeInt es una estructura de datos útil para almacenar y manipular una colección de valores relacionados. Se pueden crear, asignar valores y operar en los elementos de la matriz usando índices de fila y columna, y se pueden recorrer con bucles anidados para realizar operaciones en todos sus elementos.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------En PSeInt, existen principalmente dos tipos de bucles: el bucle "para" y el bucle "mientras". A continuación, se describen las principales diferencias entre ellos:
+
+Bucle "para": Este bucle se utiliza para repetir una serie de instrucciones un número determinado de veces. Se especifica un contador, una condición inicial, una condición de salida y un incremento en cada iteración. El bucle "para" se ejecutará mientras se cumpla la condición de salida. Algunas de las características principales del bucle "para" son:
+El número de veces que se ejecuta el bucle está determinado antes de que comience.
+Es necesario especificar un valor inicial, una condición de salida y una operación de incremento en cada iteración.
+La variable contador se actualiza automáticamente en cada iteración.
+El bucle "para" se utiliza generalmente para recorrer listas, matrices o vectores.
+Bucle "mientras": Este bucle se utiliza para repetir una serie de instrucciones mientras se cumpla una condición específica. El bucle "mientras" se ejecutará mientras se cumpla la condición establecida. Algunas de las características principales del bucle "mientras" son:
+El número de veces que se ejecuta el bucle no está determinado antes de que comience.
+La condición de salida se especifica al principio del bucle.
+La variable de control se debe actualizar manualmente dentro del bucle.
+El bucle "mientras" se utiliza generalmente cuando no se conoce de antemano cuántas veces se repetirá el bucle.
+En resumen, la principal diferencia entre el bucle "para" y el bucle "mientras" en PSeInt es que el bucle "para" se utiliza cuando se sabe de antemano cuántas veces se ejecutará el bucle, mientras que el bucle "mientras" se utiliza cuando no se sabe cuántas veces se ejecutará el bucle. Además, en el bucle "para" se especifica un valor inicial, una condición de salida y un incremento, mientras que en el bucle "mientras" se especifica sólo una condición de salida.
+
+
+En PSeInt, un arreglo es una colección de datos del mismo tipo almacenados en una sola variable. Los arreglos pueden ser de una dimensión (unidimensionales) o de varias dimensiones (multidimensionales).
+
+Para declarar un arreglo en PSeInt, se utiliza la palabra reservada "Dimension" seguida del nombre del arreglo y su tamaño. Por ejemplo, para declarar un arreglo de enteros de tamaño 5, se utiliza la siguiente sintaxis:
+
+css
+Copy code
+Dimension numeros[5] Como Entero
+Para acceder a un elemento específico del arreglo, se utiliza el nombre del arreglo seguido del número de índice entre corchetes. El primer elemento del arreglo tiene un índice de 0, el segundo elemento tiene un índice de 1, y así sucesivamente. Por ejemplo, para acceder al tercer elemento del arreglo "numeros", se utiliza la siguiente sintaxis:
+
+css
+Copy code
+numeros[2]
+Los arreglos en PSeInt pueden ser utilizados para almacenar una colección de valores que pueden ser procesados en un bucle. Por ejemplo, se puede utilizar un bucle para leer y almacenar los valores de entrada del usuario en un arreglo, y luego utilizar otro bucle para procesar y mostrar los valores almacenados en el arreglo.
+
+También es posible utilizar arreglos multidimensionales en PSeInt para almacenar datos en una matriz o tabla. Para declarar una matriz de tamaño 3x3, se utiliza la siguiente sintaxis:
+
+css
+Copy code
+Dimension matriz[3,3] Como Entero
+Para acceder a un elemento específico de la matriz, se utiliza la misma sintaxis que con los arreglos unidimensionales, pero con dos índices separados por una coma. Por ejemplo, para acceder al elemento en la fila 2 y columna 3 de la matriz "matriz", se utiliza la siguiente sintaxis:
+
+css
+Copy code
+matriz[1,2]
+En resumen, los arreglos en PSeInt son una herramienta poderosa para almacenar y procesar colecciones de datos del mismo tipo. Pueden ser utilizados para una amplia variedad de aplicaciones, desde el procesamiento de datos numéricos hasta el almacenamiento de datos de texto y caracteres.
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+
+El bucle "hacer mientras" (también conocido como "repetir hasta que" en algunos lenguajes de programación) en PSeInt es una estructura de control de flujo que permite repetir un bloque de código al menos una vez, y seguir haciéndolo mientras se cumpla una condición específica al final del bloque. La sintaxis básica del bucle "hacer mientras" en PSeInt es la siguiente:
+
+python
+Copy code
+hacer
+    'bloque de código a ejecutar'
+mientras (condición)
+El bucle "hacer mientras" comienza ejecutando el bloque de código que está dentro del "hacer". Luego, evalúa la condición especificada dentro del "mientras". Si la condición es verdadera, se ejecutará el bloque de código de nuevo, y se repetirá este proceso hasta que la condición sea falsa.
+
+Una característica importante del bucle "hacer mientras" es que el bloque de código dentro del "hacer" se ejecutará al menos una vez, independientemente de si la condición es verdadera o falsa. Esto significa que, a diferencia del bucle "mientras", que evalúa la condición antes de ejecutar el bloque de código, el bucle "hacer mientras" ejecuta primero el bloque de código y luego evalúa la condición.
+
+Un ejemplo de uso del bucle "hacer mientras" en PSeInt podría ser el siguiente:
+
+r
+Copy code
+limite <- 10
+contador <- 1
+
+hacer
+    escribir("El contador es: ", contador)
+    contador <- contador + 1
+mientras (contador <= limite)
+En este ejemplo, el bucle "hacer mientras" se utiliza para imprimir los valores del contador desde 1 hasta 10. El bloque de código dentro del "hacer" simplemente escribe el valor actual del contador en la pantalla, y luego se incrementa en uno. El bucle seguirá ejecutándose mientras el contador sea menor o igual que el límite establecido (10). Como el valor inicial del contador es 1, el bloque de código se ejecutará al menos una vez antes de evaluar la condición.
+
+
+

@@ -1,0 +1,4 @@
+h1{
+    color: aqua ;/*si le queremos dar prioridad sobre el resto de los archivos 
+    entonces ponemos (!important)
+}

@@ -21,7 +21,8 @@ public class Aritmetica {
 
     public void sumar() {
         int resultado = a + b;
-        //mandar informacion a consola, no es lo mismo que regresar un valor
+        //mandar informacion a consola, no es lo mismo que 
+        //regresar un valor
         System.out.println("resultado = " + resultado);
     }
 

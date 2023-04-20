@@ -1,0 +1,100 @@
+
+
+
+comandos de github 
+
+…or create a new repository on the command line
+echo "# prueba" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/SimsonCult/prueba.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/SimsonCult/prueba.git
+git branch -M main
+git push -u origin main
+
+
+curso de egg
+git --help // nos muestra todos los comandos y nos explica que hace
+
+git config -l // para ver la configuracion general
+git init        ///para inicializar el repositorio de forma local
+
+git branch -M main // para crear la rama principal main
+
+copiamos la url de repositorio 
+git remote add origin <pagina del repositorio>
+                //origin va a pasar a ser el nombre para el push
+git remote -v   /// para corroborar la coneccion remota
+
+
+git status  /// para revisar si tiene consas nuevas o cambios
+
+git add . /// añade todo y lo prepara para el commit
+
+git commit-m "mensaje del commit" // carga la version de mi git(el empaquetado)
+
+git push origin master // mandar al repositorio remoto
+
+git pull origin master// traer del repositorio remoto
+
+git clone origin <direccion del repositorio>
+
+git log // muestra informacion de los commit
+
+git fetch // muestra las ramas del trabajo
+
+git checkout <nombre de la rama> // podemos movernos entre las ramas
+git checkout <codigo de un comnit>//
+git config --gloval user.name//
+
+git add . // para guardar todos los cambios
+git rm --cached <nombre del archivo> // para quitar algo que queremos sacar
+git branch -m master/ para ir a la rama master
+git branch -m main/ para ir a la rama main
+git remote -v // para ver la dir del origin
+git remote rename origin destination // para cambiar el nombre de la pagina de destino  
+
+ comandos y explicacion de su funcion
+
+git init: este comando se utiliza para inicializar o crear un repositorio local vacío de Git.
+
+git branch: con este comando se puede preguntar la posición del repositorio en donde nos localizamos; si estás en una rama específica, te saldrá la rama.
+
+git branch -m main: con este comando se escoge la rama en donde te quieres localizar o hacer cambios. Hay otras versiones para git branch, como git branch v, git branch — merged, git branch –no-merged… Si quieres saber más al respecto, puedes revisarlas todas en la documentación oficial de Git.
+
+git add: este comando se utiliza para agregar carpetas o documentos en el repositorio local.
+
+git archive: este comando se utiliza para crear un archivo de documentos en un «árbol» específico.
+
+git commit -m «primer commit»: este comando se utiliza para agregar un elemento al editor de texto de tu repositorio.
+
+git commit -a «commit»: este comando te permite agregar un commit a todos los archivos de un repositorio.
+
+git log: con este comando puedes revisar el historial de commits de un programa.
+
+git remote add origin «dirección del repositorio»: este comando se utiliza para agregar el repositorio remoto (que puede ser github o gitlab) al repositorio local y, de esta manera, tenerlo actualizado en ambas partes.
+
+git push -u origin main: este comando es muy importante, ya que es la forma de enviar las versiones que vas realizando en el proceso al repositorio remoto.
+
+git status: como su nombre indica, este comando se utiliza para preguntar por el estatus en el que está el repositorio local: dónde se encuentra, sus ramas y los documentos.
+
+git config: este comando se utiliza para realizar la configuración por primera vez de Git. Aquí podrás pasarle a Git tus datos personales para que la aplicación sepa desde dónde se están haciendo los cambios. En el caso de la identidad y el editor de texto, se deben utilizar los siguientes comandos:
+git config –global user.name «John Doe»
+git config –global user.email johndoe@example.com
+git config –global core.editor emacs
+
+git clone: este comando se utiliza para clonar un repositorio en un nuevo directorio.
+
+git reset: este comando se utiliza para deshacer cambios en Git. Hay tres formas de git reset que puedes emplear en función de tus necesidades y estas son: git reset –hard, git reset –mixed y git reset –soft.
+
+git reflog: este comando se utiliza si quieres rehacer cambios y quieres volver a versiones anteriores que, tal vez, has borrado, pues aunque emplees un git reset, las versiones siempre quedan guardadas.
+Si quieres saber más acerca del funcionamiento de git reset y git reflog, tenemos un post en Keepcoding que te será de gran utilidad, ya que te hablamos sobre cómo deshacer y rehacer cambios en Git.
+
+git switch: este comando se utiliza para saltar entre ramas de un repositorio.
+
+git diff: se utiliza para saber los cambios que se han ejecutado entre commits.
+

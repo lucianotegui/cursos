@@ -25,26 +25,26 @@ public class ejercicioExtra6 {
         // ubicar las palabras en una fila aleatoria
         int fila = (int) (Math.random() * 20);
         int columna = (int) (Math.random() * (20 - palabras.length + 1));
-        for (String palabra : palabras) {
-            for (int j = 0; j < palabra.length(); j++) {
-                sopa[fila][columna+j] = palabra.charAt(j);
+        for (int i = 0; i < palabras.length; i++) {
+            for (int j = 0; j < palabras[i].length(); j++) {
+                sopa[fila][columna+j] = palabras[i].charAt(j);
             }
-            columna += palabra.length() + 1;
+            columna += palabras[i].length() + 1;
         }
         
         // rellenar los espacios no utilizados con números aleatorios
-        for (int[] sopa1 : sopa) {
-            for (int j = 0; j < sopa1.length; j++) {
-                if (sopa1[j] == 0) {
-                    sopa1[j] = (int) (Math.random() * 10);
+        for (int i = 0; i < sopa.length; i++) {
+            for (int j = 0; j < sopa[i].length; j++) {
+                if (sopa[i][j] == 0) {
+                    sopa[i][j] = (int) (Math.random() * 10);
                 }
             }
         }
         
         // imprimir la sopa de letras
-        for (int[] sopa1 : sopa) {
-            for (int j = 0; j < sopa1.length; j++) {
-                System.out.print((char) sopa1[j] + " ");
+        for (int i = 0; i < sopa.length; i++) {
+            for (int j = 0; j < sopa[i].length; j++) {
+                System.out.print((char) sopa[i][j] + " ");
             }
             System.out.println();
         }

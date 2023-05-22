@@ -1,0 +1,113 @@
+package Entidades;
+
+public class Cafetera {
+    private int capacidadMaxima;
+    private int cantidadActual;
+    
+    public Cafetera() {
+    }
+    
+    public Cafetera(int capacidadMaxima, int cantidadActual) {
+        this.capacidadMaxima = capacidadMaxima;
+        this.cantidadActual = cantidadActual;
+    }
+    
+    public int getCapacidadMaxima() {
+        return capacidadMaxima;
+    }
+    
+    public void setCapacidadMaxima(int capacidadMaxima) {
+        this.capacidadMaxima = capacidadMaxima;
+    }
+    
+    public int getCantidadActual() {
+        return cantidadActual;
+    }
+    
+    public void setCantidadActual(int cantidadActual) {
+        this.cantidadActual = cantidadActual;
+    }
+}
+
+SERVICOS
+package Servicios;
+
+import java.util.Scanner;
+import Entidades.Cafetera;
+
+public class CafeteraServicio {
+    private Scanner sc = new Scanner(System.in).useDelimiter("\n");
+    
+    public void llenarCafetera(Cafetera cafetera) {
+        cafetera.setCantidadActual(cafetera.getCapacidadMaxima());
+        System.out.println("Cafetera llenada con éxito!");
+    }
+    
+    public void servirTaza(Cafetera cafetera) {
+        System.out.println("¿Qué tamaño de taza deseas? (en ml)");
+        int tamanoTaza = sc.nextInt();
+        
+        if (cafetera.getCantidadActual() >= tamanoTaza) {
+            cafetera.setCantidadActual(cafetera.getCantidadActual() - tamanoTaza);
+            System.out.println("Taza servida con éxito!");
+        } else {
+            System.out.println("Lo que queda en la cafetera no alcanza para llenar la taza.");
+            System.out.println("Se sirvió lo que quedaba en la cafetera: " + cafetera.getCantidadActual() + " ml");
+            cafetera.setCantidadActual(0);
+        }
+    }
+    
+    public void vaciarCafetera(Cafetera cafetera) {
+        cafetera.setCantidadActual(0);
+        System.out.println("Cafetera vaciada con éxito!");
+    }
+    
+    public void agregarCafe(Cafetera cafetera) {
+        System.out.println("¿Cuánto café deseas agregar? (en ml)");
+        int cantidadCafe = sc.nextInt();
+        
+        if (cafetera.getCantidadActual() + cantidadCafe <= cafetera.getCapacidadMaxima()) {
+            cafetera.setCantidadActual(cafetera.getCantidadActual() + cantidadCafe);
+            System.out.println("Café agregado con éxito!");
+        } else {
+            System.out.println("No se puede agregar esa cantidad de café, excede la capacidad de la cafetera.");
+        }
+    }
+}
+
+MAIN
+import java.util.Scanner;
+import entidades.Cafetera;
+import servicios.CafeteraServicio;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Cafetera cafetera = new Cafetera(100, 50); // crea una cafetera con capacidad máxima de 100 y cantidad actual de 50
+        CafeteraServicio servicio = new CafeteraServicio();
+
+        System.out.println("Cafetera creada con capacidad máxima de " + cafetera.getCapacidadMaxima() + " y cantidad actual de " + cafetera.getCantidadActual());
+
+        // llenar la cafetera
+        servicio.llenarCafetera(cafetera);
+        System.out.println("Cafetera llenada, cantidad actual: " + cafetera.getCantidadActual());
+
+        // servir una taza
+        System.out.print("Ingrese el tamaño de la taza en ml: ");
+        int tamanoTaza = sc.nextInt();
+        servicio.servirTaza(tamanoTaza, cafetera);
+        System.out.println("Cantidad actual de café: " + cafetera.getCantidadActual());
+
+        // agregar café
+        System.out.print("Ingrese la cantidad de café a agregar en ml: ");
+        int cantidadAgregar = sc.nextInt();
+        servicio.agregarCafe(cantidadAgregar, cafetera);
+        System.out.println("Cantidad actual de café: " + cafetera.getCantidadActual());
+
+        // vaciar la cafetera
+        servicio.vaciarCafetera(cafetera);
+        System.out.println("Cafetera vaciada, cantidad actual: " + cafetera.getCantidadActual());
+    }
+
+}

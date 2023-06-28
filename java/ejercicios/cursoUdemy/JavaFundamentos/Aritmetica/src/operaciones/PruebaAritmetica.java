@@ -6,8 +6,8 @@ package operaciones;
 public class PruebaAritmetica {
 
     public static void main(String[] args) {
-
-        var a = 10;// estas variavles no pueden ser utilizadas en otro metodo
+// var solo se usa en variables locales
+        var a = 10;// estas variables no pueden ser utilizadas en otro metodo
         var b = 2;// solo se utilizan en el metodo que las definio, se crea y se destruye en este metodo
         miMetodo();
 

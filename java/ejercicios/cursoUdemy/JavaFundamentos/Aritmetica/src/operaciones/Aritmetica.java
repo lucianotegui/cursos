@@ -13,9 +13,9 @@ public class Aritmetica {
         System.out.println("Ejecutando constructor vacio");
     }
     // constructor con argumentos
-    public Aritmetica(int arg1, int arg2){
-        a = arg1;
-        b = arg2;
+    public Aritmetica(int a, int b){
+        this.a = a;//this.a es el atributo "a" y el otro 'a' es elargumento que se paso.
+        this.b = b;
         System.out.println("ejecutando el constructor con argumentos");
     }    
 
